@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   before_filter :authenticate_user!
-  prepend_before_filter :require_no_authentication, :only => [:index]
+  # prepend_before_filter :require_no_authentication, :only => [:index]
   
   def index
     @products = Product.all
